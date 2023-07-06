@@ -1,91 +1,30 @@
 <!DOCTYPE html>
-<html><head>
+<html style="font-size:18px;">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>default</title>
+<title>JavaEE简历</title>
 <link rel="icon" href="/scgi/favicon.ico">
 <script type="text/javascript">
 if(!window.user){
 	window.user={};
 }
-document.addEventListener("DOMContentLoaded",function(e){
-	//console.log("DOMContentLoaded");
-});
-document.onreadystatechange=function(){
-	//if("interactive"===document.readyState){
-	//}
-	//if("complete"===document.readyState){
-	//}
-	//console.log("document.readyState="+document.readyState);
-};
-//onbeforeunload=z=>0;
-//onbeforeunload=z=>{
-	//console.log(z);
-	//return 0;
-//}; 
-//window.addEventListener("load",function(e){
-//});
-//window.onload=function(e){
-	//console.log("onload");
-	//document.body.click();
-//};
-function login(){
-	sessionStorage.setItem('k','v');
-	console.log('online-'+Math.random());
-}
-function check(){
-	if(sessionStorage.getItem('k')){
-		console.log('Authorized-'+Math.random());
-	}else{
-		console.log('Unauthorize-'+Math.random());
-	}
-}
-function exit(){
-	sessionStorage.removeItem('k');
-	console.log('exit-'+Math.random());
-}
-function func(){
-	window.open("https://www.fnlgjob.com/","_blank");
-}
-function token(){
-	let request=new XMLHttpRequest();
-	request.open('POST','/guosen/ms-gpt/login');
-	//request.open('GET','/guosen/dist/');
-	request.setRequestHeader('Content-Type','application/json');
-	request.addEventListener('readystatechange',function(){
-		//if (this.readyState === 4) {let imgData = JSON.parse(this.responseText)}
-	});
-	request.withCredentials=true;
-	request.send(JSON.stringify({name:'admin',password:'Gx82130833'}));
-	//request.send();
-}
-function tuisong(){
-	let es=new window.EventSourcePolyfill('/guosen/ms-gpt/createSse',{headers:{Authorization:'Bearer'+'token'}});
-	es.onopen=(e)=>{
-		console.log('onopen',e);
-	}
-	es.onmessage=(e)=>{
-		console.log('onmessage',e);
-	}
-	es.onerror=(e)=>{
-		console.log('onerror',e);
-	}
-}
-
+document.addEventListener("DOMContentLoaded",e=>{});
 </script>
 <style type="text/css">
-*{margin:0px;padding:0px;box-sizing:border-box;}
+*{margin:0px;padding:0px;box-sizing:border-box;border:none;list-style:none;text-align:center;}
 </style>
-</head><body>
-<article style="height:500px;border:1px solid red;">
-	<section style="width:300px;height:300px;border:1px solid blue;">
-		<aside style="width:100px;height:100px;border:1px solid green;"><nav>sessionStorage</nav><aside>
-	<section>
-</article>
+</head>
+<body style="margin:0;">
+<img src="../im/card-wx.png">
+<hr style="border:1px solid red;margin:22rem 0px;">
+<img src="../im/card-qq.png">
+<hr style="border:1px solid red;margin:22rem 0px;">
 <button onclick="login()">login</button>
 <button onclick="check()">check</button>
 <button onclick="exit()">exit</button>
 <button onclick="func()">func</button>
 <button onclick="token()">token</button>
 <button onclick="tuisong()">tuisong</button>
-</body></html>
+</body>
+</html>
