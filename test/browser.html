@@ -9,10 +9,14 @@
 </style>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded",e=>{
-	document.body.innerText=navigator.userAgent;
+	document.body.firstElementChild.innerText=navigator.userAgent;
+	document.body.lastElementChild.innerText=navigator.userAgent;
 });
 </script>
 </head>
 <body style="text-align:center;padding:3rem 0px;">
+<section></section>
+<hr style="margin:2rem 0px;">
+<article style="height:2rem;line-height:2rem;overflow:scroll;white-space:nowrap;"></article>
 </body>
 </html>
