@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html style="font-size:18px;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>通用收款码</title>
+<link rel="icon" href="/page/favicon.ico">
+<style type="text/css">
+	*{margin:0px;padding:0px;box-sizing:border-box;}
+	h4.bank>span{color: red;}
+	header>h4,footer>h4{margin-top:1rem;}
+	li{margin-top:1rem;}
+</style>
+<script type="text/javascript">
+let pda=(function(){
+	if(navigator.userAgent.indexOf(' wxwork/') !== -1){
+		return 'qywx'
+	}
+	if(navigator.userAgent.indexOf(' MicroMessenger/') !== -1){
+		return 'wx';
+	}
+	if(navigator.userAgent.indexOf(' QQ/') !== -1){
+		return 'qq';
+	}
+	if(navigator.userAgent.indexOf(' AliApp(AP/') !== -1){
+		return location.replace('https://qr.alipay.com/fkx12257qtdol5x9clgz61a');
+	}
+	return 'pda';
+})();//pda='wx';
+document.addEventListener("DOMContentLoaded",function(evt){
+	const ctr=document.body;
+	if('wx'===pda){
+		ctr.querySelectorAll('.wx').forEach(ele=>{
+			ele.hidden=false;
+		});
+		const ele=ctr.querySelector('li.wx');
+		ele.firstElementChild.style.width='200px';
+		ele.firstElementChild.style.height='200px';
+		ele.lastElementChild.innerHTML='<span style="color:red;font-weight:bold;">保存</span>图片到相册扫码支付';
+	}else if('qq'===pda){
+		ctr.querySelectorAll('.qq').forEach(ele=>{
+			ele.hidden=false;
+		});
+		const ele=ctr.querySelector('li.qq');
+		ele.firstElementChild.style.width='200px';
+		ele.firstElementChild.style.height='200px';
+		ele.lastElementChild.innerHTML='<span style="color:red;font-weight:bold;">长按</span>识别使用QQ支付';
+	}else{
+		ctr.querySelectorAll('.zfb').forEach(ele=>{
+			ele.hidden=false;
+		});
+		ctr.querySelectorAll('.wx').forEach(ele=>{
+			ele.hidden=ele.classList.contains('only');
+		});
+		ctr.querySelectorAll('.qq').forEach(ele=>{
+			ele.hidden=ele.classList.contains('only');
+		});
+		ctr.querySelectorAll('.bank').forEach(ele=>{
+			ele.hidden=false;
+		});
+		const all=ctr.querySelectorAll('li');
+		all.forEach(ele=>{
+			ele.style.display='inline-block';
+			ele.firstElementChild.style.height='100px';
+			ele.firstElementChild.style.width='100px';
+		});
+		all[1].style.marginLeft=all[1].style.marginRight='0.5rem';
+	}
+});
+</script>
+</head>
+<body style="padding-bottom:2rem;">
+<header style="text-align:center;margin-top:2rem;padding:0px 1rem;">
+	<h4>外包接单，可开发各类软件，如：app、网站、小程序、公众号、毕业设计等</h4>
+	<h4>微信联系: q1416229779</h4>
+</header>
+<hr style="margin-top:1.5rem;">
+<aside style="margin-top:1.5rem;text-align:center;">
+	<h4 class="wx only" hidden>欢迎使用微信支付</h4>
+	<h4 class="qq only" hidden>欢迎使用QQ支付</h4>
+	<h4 class="bank only" hidden>用<span> 微信 </span>或<span> 支付宝 </span>或<span> QQ </span>重新扫码支付</h4>
+</aside>
+<ul style="text-align:center;">
+	<li class="zfb" hidden>
+		<img src="./wcy-zfb.png">
+		<nav>支付宝</nav>
+	</li>
+	<li class="wx" hidden>
+		<img src="./wcy-wx.png">
+		<nav>微信支付</nav>
+	</li>
+	<li class="qq" hidden>
+		<img src="./wcy-qq.png">
+		<nav>QQ支付</nav>
+	</li>
+</ul>
+<hr class="wx bank" hidden style="margin-top:1.5rem;">
+<footer class="wx bank" hidden style="text-align:center;margin-top:1rem;">
+	<h4 style="margin-top:1.5rem;">
+		<span style="color:red;">银行转账</span><span>看这里</span>
+	</h4>
+	<h4>
+		<span>户名:</span><span>王朝阳</span>&nbsp;&nbsp;&nbsp;<span>银行:</span><span>招商银行</span>
+	</h4>
+	<h4>
+		<span>账号:&nbsp;</span><span>62148</span> <span style="color:red;">301111</span> <span>39597</span>
+	</h4>
+</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="font-size:18px;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>默认主页</title>
+<link rel="icon" href="/page/favicon.ico">
+<style type="text/css">
+	*{margin:0px;padding:0px;box-sizing:border-box;}
+</style>
+<script type="text/javascript">
+let pda=(function(){
+	if(navigator.userAgent.indexOf(' wxwork/') !== -1){
+		return 'qywx'
+	}
+	if(navigator.userAgent.indexOf(' MicroMessenger/') !== -1){
+		return 'wx';
+	}
+	if(navigator.userAgent.indexOf(' QQ/') !== -1){
+		return 'qq';
+	}
+	if(navigator.userAgent.indexOf(' AliApp(AP/') !== -1){
+		return location.href='https://qr.alipay.com/fkx12257qtdol5x9clgz61a';
+	}
+	return 'pda';
+})();//pda='wx';
+document.addEventListener("DOMContentLoaded",function(evt){
+});
+</script>
+</head>
+<body>
+<header style="text-align:center;margin-top:3rem;height:4rem;border:1px solid blue;">
+</header>
+<hr style="margin-top:1.5rem;">
+<article style="border:1px solid red;text-align:center;padding:2rem 0px;">
+	<img style="border:none;" src="./pay/wcy-pay.png" title="支付宝、QQ、微信">
+	<nav style="color:black;font-weight:bold;font-size:1.2rem;">支付宝、QQ、微信</nav>
+</article>
+<hr class="bank" style="margin-top:1.5rem;">
+<footer class="bank" style="text-align:center;margin-top:1rem;height:4rem;border:1px solid green;">
+</footer>
+</body>
+</html>

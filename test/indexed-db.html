@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html style="font-size:18px;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>IndexedDB</title>
+<style type="text/css">
+	*{margin:0px;padding:0px;box-sizing:border-box;}
+	button{cursor:pointer;}
+	button:hover{background-color:aqua;}
+</style>
+<script type="text/javascript">
+if(!window.user){
+	window.user={};
+}
+document.addEventListener("DOMContentLoaded",e=>{});
+const employeeData=[
+	{id:'00-01',name:'gopal',age:35,email:'gopal@tutorialspoint.com'},
+	{id:'00-02',name:'prasad',age:32,email:'prasad@tutorialspoint.com'}
+];
+let idb=null;
+const req=window.indexedDB.open('test',99);
+req.onerror=(a)=>{
+	console.log('err');
+	console.log(a);
+};
+req.onsuccess=(a)=>{
+	console.log('succ');
+	idb=a.target.result;
+	console.log(a);
+};
+req.onblocked=(a)=>{
+	console.log('block');
+	console.log(a);
+};
+req.onupgradeneeded=(a)=>{
+	console.log('grade');
+	const tdb=a.target.result;
+	console.log(a);
+	const store=tdb.createObjectStore('employee',{keyPath:'id',autoIncrement:false});
+	store.createIndex("email","email",{unique:true});
+	store.transaction.oncomplete=()=>{
+		const lstre=tdb.transaction('employee','readwrite',undefined).objectStore('employee');
+		for(const o of employeeData){
+			lstre.add(o);
+		}
+	};
+};
+function readone(){
+	const tns=idb.transaction(["employee"],'readonly');
+	const store=tns.objectStore("employee");
+	const req=store.get('00-01');
+	req.onerror=(e)=>{
+		window.console.log('NSError');
+		window.console.log(e);
+	};
+	req.onsuccess=(e)=>{
+		if(e.result){
+			window.console.log("geted");
+			window.console.log(e.result);
+		}else{
+			window.console.log('NSNotFound');
+		}
+	};
+}
+function readzero(){
+	const tns=idb.transaction(["employee"],'readonly');
+	const store=tns.objectStore("employee");
+	const req=store.get('00-03');
+	req.onerror=(e)=>{
+		window.console.log('NSError');
+		window.console.log(e);
+	};
+	req.onsuccess=(e)=>{
+		if(e.result){
+			window.console.log("geted");
+			window.console.log(e.result);
+		}else{
+			window.console.log('NSNotFound');
+		}
+	};
+}
+function readAll(){
+	const store=idb.transaction("employee",'readonly').objectStore("employee");
+	store.openCursor().onsuccess=(e)=>{
+		const cursor=e.target.result;
+		if(cursor){
+			window.console.log(cursor.value);
+			cursor.continue();
+		}
+	};
+}
+function addone(){
+	const store=idb.transaction(["employee"],"readwrite").objectStore("employee");
+	const req=store.add({ id:"00-03",name:"Kenny",age:19,email:"kenny@planet.org"});
+	req.onsuccess=(e)=>{
+		window.console.log("Kenny added");
+	};
+	req.onerror=(e)=>{
+		window.console.log(e);
+		window.console.log("Can't add Kenny");
+	};
+}
+function remove(){
+	const store=idb.transaction(["employee"],"readwrite").objectStore("employee");
+	const req=store.delete("00-03");
+	req.onsuccess=(e)=>{
+		window.console.log("Kenny deleted");
+	};
+	req.onerror=(e)=>{
+		window.console.log(e);
+		window.console.log("Can't del Kenny");
+	};
+}
+function purge(){
+	window.console.log("purge");
+	window.indexedDB.delete('test');
+}
+</script>
+</head>
+<body style="text-align:center;padding:3rem;">
+<button onclick="readone()">readone</button>
+<button onclick="readzero()">readzero</button>
+<button onclick="readAll()">readAll</button>
+<button onclick="addone()">addone</button>
+<button onclick="remove()">remove</button>
+<button onclick="purge()">purge</button>
+</body>
+</html>

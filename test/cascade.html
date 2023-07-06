@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>select</title>
+<script type="text/javascript">
+if(!window.user){
+	window.user={};
+}
+document.addEventListener("DOMContentLoaded",function(e){
+	user.dat=[
+	{tip:"壹级菜单0",dat:[
+		{tip:"贰级菜单00",dat:[
+			{tip:"叁级菜单000"},{tip:"叁级菜单001"},{tip:"叁级菜单002"},{tip:"叁级菜单003"},{tip:"叁级菜单004"}
+		]},
+		{tip:"贰级菜单01",dat:[
+			{tip:"叁级菜单010"},{tip:"叁级菜单011"},{tip:"叁级菜单012"},{tip:"叁级菜单013"},{tip:"叁级菜单014"}
+		]},
+		{tip:"贰级菜单02",dat:[
+			{tip:"叁级菜单020"},{tip:"叁级菜单021"},{tip:"叁级菜单022"},{tip:"叁级菜单023"},{tip:"叁级菜单024"}
+		]},
+		{tip:"贰级菜单03",dat:[
+			{tip:"叁级菜单030"},{tip:"叁级菜单031"},{tip:"叁级菜单032"},{tip:"叁级菜单033"},{tip:"叁级菜单034"}
+		]},
+		{tip:"贰级菜单04",dat:[
+			{tip:"叁级菜单040"},{tip:"叁级菜单041"},{tip:"叁级菜单042"},{tip:"叁级菜单043"},{tip:"叁级菜单044"}
+		]},
+		{tip:"贰级菜单05",dat:[
+			{tip:"叁级菜单050"},{tip:"叁级菜单051"},{tip:"叁级菜单052"},{tip:"叁级菜单053"},{tip:"叁级菜单054"}
+		]},
+		{tip:"贰级菜单06",dat:[
+			{tip:"叁级菜单060"},{tip:"叁级菜单061"},{tip:"叁级菜单062"},{tip:"叁级菜单063"},{tip:"叁级菜单064"}
+		]},
+		{tip:"贰级菜单07",dat:[
+			{tip:"叁级菜单040"},{tip:"叁级菜单071"},{tip:"叁级菜单072"},{tip:"叁级菜单073"},{tip:"叁级菜单074"}
+		]}
+	]},
+	{tip:"壹级菜单1",dat:[
+		{tip:"贰级菜单10",dat:[
+			{tip:"叁级菜单100"},{tip:"叁级菜单101"},{tip:"叁级菜单102"},{tip:"叁级菜单103"},{tip:"叁级菜单104"}
+		]},
+		{tip:"贰级菜单11",dat:[
+			{tip:"叁级菜单110"},{tip:"叁级菜单111"},{tip:"叁级菜单112"},{tip:"叁级菜单113"},{tip:"叁级菜单114"}
+		]},
+		{tip:"贰级菜单12",dat:[
+			{tip:"叁级菜单120"},{tip:"叁级菜单121"},{tip:"叁级菜单122"},{tip:"叁级菜单123"},{tip:"叁级菜单124"}
+		]},
+		{tip:"贰级菜单13",dat:[
+			{tip:"叁级菜单130"},{tip:"叁级菜单131"},{tip:"叁级菜单132"},{tip:"叁级菜单133"},{tip:"叁级菜单134"}
+		]},
+		{tip:"贰级菜单14",dat:[
+			{tip:"叁级菜单140"},{tip:"叁级菜单141"},{tip:"叁级菜单142"},{tip:"叁级菜单143"},{tip:"叁级菜单144"}
+		]}
+	]},
+	{tip:"壹级菜单2",dat:[
+		{tip:"贰级菜单20",dat:[
+			{tip:"叁级菜单200"},{tip:"叁级菜单201"},{tip:"叁级菜单202"},{tip:"叁级菜单203"},{tip:"叁级菜单204"}
+		]},
+		{tip:"贰级菜单21",dat:[
+			{tip:"叁级菜单210"},{tip:"叁级菜单211"},{tip:"叁级菜单212"},{tip:"叁级菜单213"},{tip:"叁级菜单214"}
+		]},
+		{tip:"贰级菜单22",dat:[
+			{tip:"叁级菜单220"},{tip:"叁级菜单221"},{tip:"叁级菜单222"},{tip:"叁级菜单223"},{tip:"叁级菜单224"}
+		]},
+		{tip:"贰级菜单23",dat:[
+			{tip:"叁级菜单230"},{tip:"叁级菜单231"},{tip:"叁级菜单232"},{tip:"叁级菜单233"},{tip:"叁级菜单234"}
+		]},
+		{tip:"贰级菜单24",dat:[
+			{tip:"叁级菜单240"},{tip:"叁级菜单241"},{tip:"叁级菜单242"},{tip:"叁级菜单243"},{tip:"叁级菜单244"}
+		]}
+	]},
+	{tip:"壹级菜单3",dat:[
+		{tip:"贰级菜单30"},{tip:"贰级菜单31"},{tip:"贰级菜单32"},{tip:"贰级菜单33"},{tip:"贰级菜单34"}
+	]},
+	{tip:"壹级菜单4",dat:[
+		{tip:"贰级菜单40"},{tip:"贰级菜单41"},{tip:"贰级菜单42"},{tip:"贰级菜单43"},{tip:"贰级菜单44"}
+	]},
+	{tip:"壹级菜单5",dat:[
+		{tip:"贰级菜单51"},{tip:"贰级菜单52"},{tip:"贰级菜单53"},{tip:"贰级菜单54"},{tip:"贰级菜单55"}
+	]},
+	{tip:"壹级菜单6",dat:[
+		{tip:"贰级菜单60",dat:[
+			{tip:"叁级菜单600"},{tip:"叁级菜单601"},{tip:"叁级菜单602"},{tip:"叁级菜单603"},{tip:"叁级菜单604"}
+		]},
+		{tip:"贰级菜单61",dat:[
+			{tip:"叁级菜单610"},{tip:"叁级菜单611"},{tip:"叁级菜单612"},{tip:"叁级菜单613"},{tip:"叁级菜单614"}
+		]},
+		{tip:"贰级菜单62",dat:[
+			{tip:"叁级菜单620"},{tip:"叁级菜单621"},{tip:"叁级菜单622"},{tip:"叁级菜单623"},{tip:"叁级菜单624"}
+		]},
+		{tip:"贰级菜单63",dat:[
+			{tip:"叁级菜单630"},{tip:"叁级菜单631"},{tip:"叁级菜单632"},{tip:"叁级菜单633"},{tip:"叁级菜单634"}
+		]}
+	]},
+	{tip:"壹级菜单7",dat:[
+		{tip:"贰级菜单70"},{tip:"贰级菜单71"},{tip:"贰级菜单72"},{tip:"贰级菜单73"},{tip:"贰级菜单74"}
+	]}
+	];
+	user.panelh=40;
+	user.panel=document.body.appendChild(document.createElement("ul"));
+	user.panel2=document.body.appendChild(document.createElement("ul"));
+	user.panel3=document.body.appendChild(document.createElement("ul"));
+});
+window.addEventListener("load",function(e){
+	var rect=document.getElementById("sect").getBoundingClientRect();
+	user.panel.className="panel";
+	user.panel2.className="panel";
+	user.panel3.className="panel";
+	user.panel.style.display="none";
+	user.panel2.style.display="none";
+	user.panel3.style.display="none";
+	user.panel.style.height=user.panelh*user.dat.length+"px";
+	user.panel.style.left=rect.left+"px";
+	user.panel2.style.left=rect.left+220+"px";
+	user.panel3.style.left=rect.left+440+"px";
+	user.panel.style.top=rect.bottom+"px";
+	for(var i=0;i!==user.dat.length;i++){
+		var si=user.panel.appendChild(document.createElement("li"));
+		si.innerHTML='<span>'+user.dat[i].tip+'</span><img src="i.png">';
+		si.onmouseenter=user.cascade2show;
+	}
+});
+user.cascade2show=function(e,n){
+	user.panel2.innerHTML="";
+	if(1===n){
+		user.dat2=e.parentNode.children[0].innerText;
+	}else{
+		user.panel3.style.display="none";
+		user.dat2=e.currentTarget.children[0].innerText;
+	}
+	for(var i=0;i!==user.dat.length;i++){
+		if(user.dat2===user.dat[i].tip){
+			user.dat2=user.dat[i].dat;
+			var idx1=i;
+			break;
+		}
+	}
+	user.panel2.style.height=user.panelh*user.dat2.length+"px";
+	for(var i=0;i!==user.dat2.length;i++){
+		var si=user.panel2.appendChild(document.createElement("li"));
+		var html='<input type="checkbox" onchange="user.cascade2check(this)"><span>'+user.dat2[i].tip+'</span>';
+		if(user.dat2[i].dat){
+			si.innerHTML=html+'<img src="i.png">';
+		}else{
+			si.innerHTML=html;
+		}
+		si.onmouseenter=user.cascade3show;
+	}
+	if(user.dat.length>user.dat2.length){
+		var sh=document.documentElement.clientHeight;
+		var rect=user.panel.getBoundingClientRect();
+		if(user.dat2.length%2){
+			var idx2=(user.dat2.length-1)/2;
+			if(idx2<idx1){
+				if(user.panelh*(idx1+1+idx2)+rect.top>rect.bottom){
+					user.panel2.style.bottom=sh-rect.bottom+"px";
+				}else{
+					user.panel2.style.top=rect.top+(idx1-idx2)*user.panelh+"px";
+				}
+			}else{
+				user.panel2.style.top=user.panel.style.top;
+			}
+		}else{
+			var idx2=user.dat2.length/2;
+			if(idx2<idx1){
+				if(user.panelh*(idx1+idx2)+rect.top>rect.bottom){
+					user.panel2.style.bottom=sh-rect.bottom+"px";
+				}else{
+					user.panel2.style.top=rect.top+(idx1-idx2)*user.panelh+"px";
+				}
+			}else{
+				user.panel2.style.top=user.panel.style.top;
+			}
+		}
+	}else{
+		user.panel2.style.top=user.panel.style.top;
+	}
+	user.panel2.style.display="block";
+};
+user.cascade3show=function(e,n){
+	user.panel3.innerHTML="";
+	if(1===n){
+		user.dat3=e.parentNode.children[1].innerText;
+	}else{
+		user.dat3=e.currentTarget.children[1].innerText;
+	}
+	for(var i=0;i!==user.dat2.length;i++){
+		if(user.dat3===user.dat2[i].tip){
+			user.dat3=user.dat2[i].dat;
+			if(user.dat3){
+				var idx2=i;
+				break;
+			}else{
+				return;
+			}
+		}
+	}
+	user.panel3.style.height=user.panelh*user.dat3.length+"px";
+	for(var i=0;i!==user.dat3.length;i++){
+		var si=user.panel3.appendChild(document.createElement("li"));
+		si.innerHTML='<input type="checkbox" onchange="user.cascade3check(this)"><span>'+user.dat3[i].tip+'</span>';
+	}
+	var sh=document.documentElement.clientHeight;
+	var rect=user.panel2.getBoundingClientRect();
+	if(user.dat3.length===user.dat2.length){//3=2
+		user.panel3.style.top=user.panel2.style.top;
+	}else if(user.dat3.length<user.dat2.length){//2>3
+		if(user.dat3.length%2){
+			var idx3=(user.dat3.length-1)/2;
+			if(idx3<idx2){
+				if(user.panelh*(idx2+1+idx3)+rect.top>rect.bottom){
+					user.panel3.style.bottom=sh-rect.bottom+"px";
+				}else{
+					user.panel3.style.top=rect.top+(idx2-idx3)*user.panelh+"px";
+				}
+			}else{
+				user.panel3.style.top=user.panel2.style.top;
+			}
+		}else{
+			var idx3=user.dat3.length/2;
+			if(idx3<idx2){
+				if(user.panelh*(idx2+idx3)+rect.top>rect.bottom){
+					user.panel3.style.bottom=sh-rect.bottom+"px";
+				}else{
+					user.panel3.style.top=rect.top+(idx2-idx3)*user.panelh+"px";
+				}
+			}else{
+				user.panel3.style.top=user.panel2.style.top;
+			}
+		}
+	}else if(user.dat3.length<user.dat.length){//2<3 & 3<1
+		console.log("2<3 & 3<1");
+		user.panel3.style.bottom=sh-rect.bottom+"px";
+	}else{//2<3 & 3>=1
+		user.panel3.style.top=user.panel.style.top;
+	}
+	user.panel3.style.display="block";
+};
+user.cascade2check=function(val,txt){
+	txt=val.nextElementSibling.innerText;
+	//val=val.value;
+	val=val.checked;
+	console.log("cascade2check",val,txt);
+};
+user.cascade3check=function(val,txt){
+	txt=val.nextElementSibling.innerText;
+	//val=val.value;
+	val=val.checked;
+	console.log("cascade3check",val,txt);
+};
+user.show=function(obj){
+	if(obj.lastElementChild.className){
+		obj.lastElementChild.className="";
+		user.panel.style.display="none";
+		user.panel2.style.display="none";
+		user.panel3.style.display="none";
+		return;
+	}
+	obj.lastElementChild.className="show";
+	user.panel.style.display="block";
+};
+</script>
+<style type="text/css">
+img.show{transform:rotate(180deg);}
+ul.panel{
+	border:1px solid red;
+	width:220px;
+	position:absolute;
+	box-sizing:border-box;
+	padding:0px;
+	cursor:pointer;
+	background-color:white;
+	margin:0px;
+}
+ul.panel>li{
+	border:1px solid blue;
+	height:40px;
+	line-height:40px;
+	box-sizing:border-box;
+	list-style:none;
+	padding:0px 11px 0px 20px;
+}
+ul.panel>li:hover{
+	background-color:#eeeeee;
+}
+ul.panel>li>img{
+	float:right;
+	margin-top:11px;
+	transform:rotate(-90deg);
+}
+</style>
+</head><body>
+<article style="margin:9rem auto;font-weight:bolder;font-size:0.8rem;text-align:center;">
+	<textarea value="abc">jdk</textarea>
+	<img src="copy.png" style="background-color:#abcdef;">
+	<header>header</header>
+	<nav id="sect" onclick="user.show(this)" style="display:block;position:relative;margin:0px auto;width:520px;height:40px;padding:0px;box-sizing:border-box;cursor:pointer;">
+		<input type="text" readonly style="display:block;position:absolute;padding-left:11px;width:100%;height:100%;top:0px;left:0px;margin:0px;box-sizing:border-box;cursor:pointer;">
+		<img src="i.png" style="position:absolute;right:11px;top:12px;display:block;width:20px;height:17px;">
+	</nav>
+	<aside>aside</aside>
+	<section>section</section>
+	<div style="width:100%;min-height:200px;border:1px solid red;">
+投资建议感谢您的信赖露的事项。如您是我们的股东，关于投资者咨询的问题8
+	</div>
+	<footer>footer</footer>
+</article></body></html>
