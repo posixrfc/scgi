@@ -7,17 +7,33 @@
 <link rel="icon" href="/scgi/favicon.ico">
 <style type="text/css">
 	*{margin:0px;padding:0px;box-sizing:border-box;}
+	body>*{
+		transform:rotate(270deg);
+		transform-origin:left top;
+		border:none;
+		display:block;
+		position:absolute;
+		left:0px;
+		top:0px;
+	}
 </style>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded",e=>{
-	document.body.firstElementChild.innerText=navigator.userAgent;
-	document.body.lastElementChild.innerText=navigator.userAgent;
+	const doch=document.documentElement.clientHeight;
+	const multi=document.body.firstElementChild;
+	const single=document.body.lastElementChild;
+	single.innerText=multi.innerText=navigator.userAgent;
+	single.style.width=multi.style.width=doch+'px';
+	const sinh=3,mulh=5,mrgn=3;
+	single.style.height=sinh+'rem';
+	multi.style.height=mulh+'rem';
+	multi.style.translate=mrgn+'rem '+doch+'px';
+	single.style.translate=mulh+mrgn+2+'rem '+doch+'px';
 });
 </script>
 </head>
 <body style="text-align:center;padding:3rem 0px;">
-<section></section>
-<hr style="margin:2rem 0px;">
-<article style="height:2rem;line-height:2rem;overflow:scroll;white-space:nowrap;"></article>
+<section style="overflow:visible;text-align:left;word-break:break-all;"></section>
+<article style="line-height:2rem;overflow:scroll;white-space:nowrap;"></article>
 </body>
 </html>
