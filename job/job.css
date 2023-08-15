@@ -1,4 +1,8 @@
-@charset "UTF-8";
+@charset "utf-8";
+@import url('job.pc.css') screen and (min-width:797px);
+@import url('job.pad.css') screen and (min-width:650px) and (max-width:796px);
+@import url('job.mob.css') screen and (max-width:649px);
+@namespace svg url(http://www.w3.org/2000/svg);
 @media all
 {
 	*{
@@ -47,125 +51,5 @@
 	html{
 		font-size:18px;
 		background-color:white;
-	}
-}
-@media only screen and (max-width:649px)
-{
-	article.paper{
-		border:1px solid red;
-		width:100%;
-		height:1128px;
-		margin:0px auto;
-		text-align:center;
-		position:relative;
-	}
-	article.paper>*{
-		width:650px;
-	}
-	article.paper>header{
-		margin:68px auto 0px;
-		border-bottom:1px solid black;
-	}
-	article.paper>section{
-		border:1px solid #eeeeee;
-		height:970px;
-		margin:0px auto;
-	}
-	article.paper>footer{
-		height:20px;
-		margin:0px auto;
-		border-top:1px solid black;
-	}
-	article.paper>footer>nav:first-of-type{
-		float:left;
-		margin-left:200px;
-	}
-	article.paper>footer>nav:last-of-type{
-		float:right;
-		margin-right:200px;
-	}
-	hr.spit{
-		border:1px solid black;
-		display:none;
-	}
-}
-@media only screen and (min-width:650px) and (max-width:796px)
-{
-	article.paper{
-		border:1px solid #eeeeee;
-		width:100%;
-		height:1128px;
-		margin:0px auto;
-		text-align:center;
-		position:relative;
-	}
-	article.paper>*{
-		width:650px;
-	}
-	article.paper>header{
-		margin:68px auto 0px;
-		border-bottom:1px solid black;
-	}
-	article.paper>section{
-		border:1px solid #eeeeee;
-		height:970px;
-		margin:0px auto;
-	}
-	article.paper>footer{
-		height:20px;
-		margin:0px auto;
-		border-top:1px solid black;
-	}
-	article.paper>footer>nav:first-of-type{
-		float:left;
-		margin-left:200px;
-	}
-	article.paper>footer>nav:last-of-type{
-		float:right;
-		margin-right:200px;
-	}
-	hr.spit{
-		border:1px solid black;
-		display:none;
-	}
-}
-@media only screen and (min-width:796px)
-{
-	article.paper{
-		border:1px solid #eeeeee;
-		width:796px;
-		height:1128px;
-		margin:0px auto;
-		text-align:center;
-		position:relative;
-	}
-	article.paper>*{
-		width:650px;
-	}
-	article.paper>header{
-		margin:68px auto 0px;
-		border-bottom:1px solid black;
-	}
-	article.paper>section{
-		border:1px solid #eeeeee;
-		height:970px;
-		margin:0px auto;
-	}
-	article.paper>footer{
-		height:20px;
-		margin:0px auto;
-		border-top:1px solid black;
-	}
-	article.paper>footer>nav:first-of-type{
-		float:left;
-		margin-left:200px;
-	}
-	article.paper>footer>nav:last-of-type{
-		float:right;
-		margin-right:200px;
-	}
-	hr.spit{
-		border:1px solid black;
-		display:none;
 	}
 }

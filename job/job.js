@@ -153,3 +153,52 @@ _.attr=(e,k,v)=>{
 _.str=val=>{
 	return val?val:"";
 };
+_.encryptAes=(key,str)=>{
+	if("undefined"===typeof CryptoJS){
+		return null;
+	}
+	let keyHex = CryptoJS.enc.Utf8.parse(key);
+	let msg = CryptoJS.enc.Utf8.parse(str);
+	let encrypted = CryptoJS.AES.encrypt(msg,keyHex,{mode:CryptoJS.mode.ECB,padding:CryptoJS.pad.Pkcs7});
+	return encrypted.toString();
+};
+_.decryptAes=(key,str)=>{
+	if("undefined"===typeof CryptoJS){
+		return null;
+	}
+	let keyHex = CryptoJS.enc.Utf8.parse(key);
+	let decrypted = CryptoJS.AES.decrypt({ciphertext:CryptoJS.enc.Base64.parse(str)},keyHex,{mode:CryptoJS.mode.ECB,padding:CryptoJS.pad.Pkcs7});
+	return decrypted.toString(CryptoJS.enc.Utf8);
+};
+(function(w){
+	let tk=location.href;
+	let idx=tk.lastIndexOf("?tk=");
+	if(-1===idx || 4+idx===tk.length){
+		return location.replace("../error.html?s=invalid");
+	}
+	tk=tk.substring(idx+4);
+	tk=w.decodeURIComponent(tk);
+	tk=_.decryptAes("dngdkfjasdf874354958",tk);
+	if(!tk){
+		return location.replace("../error.html?s=invalid");
+	}
+	tk=Number.parseInt(tk);
+	if(w.isNaN(tk)){
+		return location.replace("../error.html?s=invalid");
+	}
+	if(tk<Date.now()){
+		return location.replace("../error.html?s=expire");
+	}
+})(window);
+let mob=navigator.userAgent.indexOf(' Mobile/') !== -1;
+document.addEventListener("DOMContentLoaded",function(evt){
+	if(mob){
+		document.querySelectorAll('.pc').forEach(ele=>{
+			ele.classList.add("hide");
+		});
+	}else{
+		document.querySelectorAll('.mob').forEach(ele=>{
+			ele.classList.add("hide");
+		});
+	}
+});

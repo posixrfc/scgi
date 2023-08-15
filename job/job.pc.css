@@ -1,0 +1,183 @@
+@charset "utf-8";
+@media only screen and (min-width:797px)
+{
+	article.paper{
+		/* border:1px solid #eeeeee; */
+		width:796px;
+		height:1128px;
+		margin:0px auto;
+		text-align:center;
+		position:relative;
+	}
+	article.paper>*{
+		position:absolute;
+		left:73px;
+		width:650px;
+	}
+	article.paper>section{
+		/* border:1px solid #eeeeee; */
+		top:68px;
+		height:970px;
+		margin:0px auto;
+	}
+	article.paper>section>nav.segment{
+		height:30px;
+		margin-top:0.75rem;
+	}
+	article.paper>section>nav.segment>mark{
+		display:block;
+		float:left;
+		background-color:#4e7282;
+		color:white;
+		width:90px;
+		height:100%;
+		text-align:center;
+		line-height:30px;
+		border-radius:15px 0px;
+		font-weight:bold;
+	}
+	article.paper>section>nav.segment>hr{
+		display:block;
+		float:right;
+		background:linear-gradient(to right,#4e7282,transparent);
+		height:5px;
+		width:calc(100% - 90px);
+		margin-top:14px;
+	}
+	article.paper>footer{
+		height:90px;
+		bottom:0px;
+		border:none;
+		padding-top:12px;
+	}
+	article.paper>footer>nav:first-of-type{
+		float:left;
+		margin-left:225px;
+	}
+	article.paper>footer>nav:last-of-type{
+		float:right;
+		margin-right:225px;
+	}
+	hr.spit{
+		border:1px solid black;
+		display:none;
+	}
+/* ------------- */
+	article.paper>section>ul.inf{
+		width:100%;
+		margin:0.75rem 0px 0px 0px;
+	}
+	article.paper>section>ul.inf li{
+		width:50%;
+		height:1.5rem;
+		list-style:none;
+		display:inline-block;
+	}
+	article.paper>section>ul.inf li:nth-of-type(2n){
+		float:right;
+	}
+	article.paper>section>ul.inf mark{
+		display:inline-block;
+	}
+	article.paper>section>ul.inf mark:nth-of-type(odd){
+		width:31%;
+	}
+	article.paper>section>ul.inf mark:nth-of-type(even){
+		width:69%;
+	}
+	article.paper>section>ul.inf span{
+		display:inline-block;
+		width:32px;
+	}
+	article.paper>section>ul.job{
+		width:100%;
+		margin:0.75rem 0px 0px 0px;
+	}
+	article.paper>section>ul.job li{
+		width:50%;
+		height:1.5rem;
+		list-style:none;
+		display:inline-block;
+	}
+	article.paper>section>ul.job li:nth-of-type(2n){
+		float:right;
+	}
+	article.paper>section>ul.job mark{
+		display:inline-block;
+	}
+	article.paper>section>ul.job mark:nth-of-type(odd){
+		width:28%;
+	}
+	article.paper>section>ul.job mark:nth-of-type(even){
+		width:72%;
+	}
+	article.paper>section>ul.job span{
+		display:inline-block;
+		width:32px;
+	}
+	article.paper>section>ul.brief{
+		border:none;
+	}
+	article.paper>section>ul.brief>li{
+		margin:0.75rem 0px 0px;
+		list-style:none;
+	}
+	article.paper>section>ul.brief>li>aside:first-of-type{
+		height:1.75rem;
+	}
+	article.paper>section>ul.brief>li>aside>nav{
+		color:black;
+		font-weight:bold;
+	}
+	article.paper>section>ul.brief>li>aside>nav:first-of-type{
+		float:left;
+	}
+	article.paper>section>ul.brief>li>aside>nav:last-of-type{
+		float:right;
+	}
+	article.paper>section>ul.brief>li>aside>div{
+		text-indent:2rem;
+		margin-top:0.5rem;
+	}
+	article.paper>section>ul.proj{
+		border:none;
+	}
+	article.paper>section>ul.proj>li{
+		margin:0.8rem 0px 0px;
+		list-style:none;
+	}
+	article.paper>section>ul.proj>li>mark{
+		color:black;
+		font-weight:bold;
+	}
+	article.paper>section>ul.proj>li>nav{
+		margin:5px 0px;
+		font-weight:bold;
+	}
+	article.paper>section>ul.edu{
+		width:100%;
+		margin:0.75rem 0px 0px 0px;
+	}
+	article.paper>section>ul.edu li{
+		width:50%;
+		height:1.5rem;
+		list-style:none;
+		display:inline-block;
+	}
+	article.paper>section>ul.edu li:nth-of-type(2n){
+		float:right;
+	}
+	article.paper>section>ul.edu mark{
+		display:inline-block;
+	}
+	article.paper>section>ul.edu mark:nth-of-type(odd){
+		width:29%;
+	}
+	article.paper>section>ul.edu mark:nth-of-type(even){
+		width:71%;
+	}
+	article.paper>section>ul.edu span{
+		display:inline-block;
+		width:32px;
+	}
+}

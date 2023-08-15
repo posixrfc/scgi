@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="font-size:16px;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title></title>
+<link rel="icon" href="/scgi/favicon.ico">
+<style type="text/css">
+	*{margin:0px;padding:0px;box-sizing:border-box;}
+</style>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",function(evt){
+	const doch=document.documentElement.clientHeight;
+	const ele=document.body.firstElementChild;
+	ele.style.height=ele.style.lineHeight=doch+"px";
+	let s=location.href;
+	const idx=s.lastIndexOf("?s=");
+	if(-1===idx || 3+idx===s.length){
+		return document.title=ele.innerText="出错啦";
+	}
+	s=s.substring(idx+3);
+	if("expire"===s){
+		return document.title=ele.innerText="过期啦";
+	}
+	if("invalid"===s){
+		return document.title=ele.innerText="已失效";
+	}
+	document.title=ele.innerText="出错啦";
+});
+</script>
+</head>
+<body>
+<article style="position:fixed;width:100%;text-align:center;font-weight:bolder;font-size:2rem;color:red;"></article>
+</body>
+</html>

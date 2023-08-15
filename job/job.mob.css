@@ -1,0 +1,160 @@
+@charset "utf-8";
+@media only screen and (max-width:649px)
+{
+	body{
+		padding-bottom:4rem;
+	}
+	article.paper{
+		border:none;
+		width:100%;
+	}
+	article.paper>*{
+		width:100%;
+	}
+	article.paper>section{
+		margin:0px auto;
+	}
+	article.paper>section>nav.segment{
+		height:30px;
+		margin-top:0.75rem;
+	}
+	article.paper>section>nav.segment>mark{
+		display:block;
+		float:left;
+		background-color:#4e7282;
+		color:white;
+		width:90px;
+		height:100%;
+		text-align:center;
+		line-height:30px;
+		border-radius:15px 0px;
+		font-weight:bold;
+	}
+	article.paper>section>nav.segment>hr{
+		display:block;
+		float:right;
+		background:linear-gradient(to right,#4e7282,transparent);
+		height:5px;
+		width:calc(100% - 90px);
+		margin-top:14px;
+	}
+	article.paper>footer{
+		display:none;
+	}
+	hr.spit{
+		border:1px solid black;
+		display:none;
+	}
+/* ------------- */
+	article.paper>section>ul.inf{
+		width:100%;
+		margin:0.75rem 0px 0px 0px;
+	}
+	article.paper>section>ul.inf li{
+		width:100%;
+		height:1.5rem;
+		list-style:none;
+		display:inline-block;
+	}
+	article.paper>section>ul.inf mark{
+		display:inline-block;
+	}
+	article.paper>section>ul.inf mark:nth-of-type(odd){
+		width:6rem;
+	}
+	article.paper>section>ul.inf mark:nth-of-type(even){
+		width:calc(100% - 6rem);
+	}
+	article.paper>section>ul.inf span{
+		display:inline-block;
+		width:32px;
+	}
+	article.paper>section>ul.job{
+		width:100%;
+		margin:0.75rem 0px 0px 0px;
+	}
+	article.paper>section>ul.job li{
+		width:100%;
+		height:1.5rem;
+		list-style:none;
+		display:inline-block;
+	}
+	article.paper>section>ul.job mark{
+		display:inline-block;
+	}
+	article.paper>section>ul.job mark:nth-of-type(odd){
+		width:6rem;
+	}
+	article.paper>section>ul.job mark:nth-of-type(even){
+		width:calc(100% - 6rem);
+	}
+	article.paper>section>ul.job span{
+		display:inline-block;
+		width:32px;
+	}
+	article.paper>section>ul.brief{
+		border:none;
+	}
+	article.paper>section>ul.brief>li{
+		margin:0.75rem 0px 0px;
+		list-style:none;
+	}
+	article.paper>section>ul.brief>li>aside:first-of-type{
+		height:3rem;
+	}
+	article.paper>section>ul.brief>li>aside>nav{
+		color:black;
+		font-weight:bold;
+	}
+	article.paper>section>ul.brief>li>aside>div{
+		text-indent:2rem;
+		margin-top:0.5rem;
+	}
+	article.paper>section>ul.proj{
+		border:none;
+	}
+	article.paper>section>ul.proj>li{
+		margin:0.8rem 0px 0px;
+		list-style:none;
+	}
+	article.paper>section>ul.proj>li>mark{
+		color:black;
+		font-weight:bold;
+	}
+	article.paper>section>ul.proj>li>nav{
+		margin:5px 0px;
+		font-weight:bold;
+	}
+	article.paper>section>ul.edu{
+		width:100%;
+		margin:0.75rem 0px 0px 0px;
+	}
+	article.paper>section>ul.edu li{
+		width:100%;
+		height:1.5rem;
+		list-style:none;
+		display:inline-block;
+	}
+	article.paper>section>ul.edu mark{
+		display:inline-block;
+	}
+	article.paper>section>ul.edu mark:nth-of-type(odd){
+		width:6rem;
+	}
+	article.paper>section>ul.edu mark:nth-of-type(even){
+		width:calc(100% - 6rem);
+	}
+	article.paper>section>ul.edu span{
+		display:inline-block;
+		width:32px;
+	}
+	body>footer>a{
+		display:inline-block;
+		cursor:pointer;
+		border:1px solid lightgray;
+		background-color:lightgreen;
+		color:black;
+		padding:0px 0.75rem;
+		border-radius:0.45rem;
+	}
+}
