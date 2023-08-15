@@ -190,7 +190,7 @@ _.decryptAes=(key,str)=>{
 		return location.replace("../error.html?s=expire");
 	}
 })(window);
-let mob=navigator.userAgent.indexOf(' Mobile/') !== -1;
+/*let mob=navigator.userAgent.indexOf(' Mobile/') !== -1;
 document.addEventListener("DOMContentLoaded",function(evt){
 	if(mob){
 		document.querySelectorAll('.pc').forEach(ele=>{
@@ -201,4 +201,4 @@ document.addEventListener("DOMContentLoaded",function(evt){
 			ele.classList.add("hide");
 		});
 	}
-});
+});*/

@@ -1,24 +1,14 @@
 @charset "utf-8";
-@media only screen and (min-width:797px)
+@media only screen and (min-width:650px)
 {
-	article.paper{
-		border:1px solid #eeeeee;
-		width:796px;
-		height:1128px;
-		margin:0px auto;
-		text-align:center;
-		position:relative;
-	}
 	article.paper>*{
-		position:absolute;
-		left:73px;
+		margin:0px auto;
 		width:650px;
 	}
 	article.paper>section{
 		border:1px solid #eeeeee;
-		top:68px;
 		height:970px;
-		margin:0px auto;
+		margin-top:68px;
 	}
 	article.paper>section>nav.segment{
 		height:30px;
@@ -46,9 +36,6 @@
 	}
 	article.paper>footer{
 		height:90px;
-		bottom:0px;
-		border:none;
-		padding-top:12px;
 	}
 	article.paper>footer>nav:first-of-type{
 		float:left;
@@ -179,5 +166,8 @@
 	article.paper>section>ul.edu span{
 		display:inline-block;
 		width:32px;
+	}
+	footer.btn{
+		display:none;
 	}
 }

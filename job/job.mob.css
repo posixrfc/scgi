@@ -5,7 +5,6 @@
 		padding-bottom:4rem;
 	}
 	article.paper{
-		border:none;
 		width:100%;
 	}
 	article.paper>*{
@@ -39,10 +38,6 @@
 		margin-top:14px;
 	}
 	article.paper>footer{
-		display:none;
-	}
-	hr.spit{
-		border:1px solid black;
 		display:none;
 	}
 /* ------------- */
@@ -148,7 +143,18 @@
 		display:inline-block;
 		width:32px;
 	}
-	body>footer>a{
+	footer.btn{
+		text-align:center;
+		margin:0px;
+		height:3rem;
+		position:fixed;
+		bottom:0px;
+		background-color:white;
+		width:100%;
+		line-height:2rem;
+		padding-top:0.5rem;
+	}
+	footer.btn>a{
 		display:inline-block;
 		cursor:pointer;
 		border:1px solid lightgray;
