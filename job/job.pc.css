@@ -126,12 +126,12 @@
 		text-indent:2rem;
 		margin-top:0.5rem;
 	}
-	article.paper>section>ul.proj{
-		border:none;
-	}
 	article.paper>section>ul.proj>li{
 		margin:0.8rem 0px 0px;
 		list-style:none;
+	}
+	article.paper>section>ul.proj>li.follow{
+		margin-top:0px;
 	}
 	article.paper>section>ul.proj>li>mark{
 		color:black;

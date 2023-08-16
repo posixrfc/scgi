@@ -80,7 +80,7 @@ IM、Openfire、XMPP、
 MQTT、HTML5、CSS3、ES7、WebRTC、CORS、JSONP、SQL注入、XSS、CSRF、FTP、SFTP、OSGI、React Native、Gradle、SSH、uni-app、
 W3C、MDN、MSDN、CRC、Android、iOS、小程序、公众号、Java、Objective-C、Swift、WXML、WXSS、WXS、RequireJS、Vue.js、AngularJS、React、
 Struts、Struts2、Ajax、FreeMarker、easyUI、jQuery、Stutus Menu、Nginx、Apache、HTTP、HTTPS、HTTP2.0
-Tomcat、Netty、Jetty、weblogic、JBoss、CVS、SVN、Mercurial、Git、gitlab、github、CI、Jenkins、Maven
+Tomcat、Netty、Jetty、weblogic、JBoss、CVS、SVN、Mercurial、Git、gitlab、github、CI、Jenkins、Maven、nexus、
 CentOS系列、Debian系列、FreeBSD系列、openSUSE系列、Shell、Python、Go、C、C++、Node.js、PHP、C#、TypeScript、反射、内省、动态代理、
 JavaFX、AWT、swing、JNI、Applet、JVM调优、jprofiler、JMeter、JUnit、贪心、排序、递归、分治等算法、链表、队列、栈、二叉树、
 JSP、servlet、jstl、ELexpression、ThreadPool、ThreadGroup、ForkJoin、ThreadDump、WebSocket、Apache CXF、
@@ -155,7 +155,8 @@ https证书配置自动更新，无痕持续为用户服务。
 				<nav>责任描述：</nav>
 				<div>
 负责公司机构CRM系统开发及维护，负责数据统计分析，报表输出，定时任务完成数据清算，以gRPC方式与内部系统相互调用实现高效通信，
-编写存储过程处理复杂业务，在DB层面解决复杂问题。二维码生成客户名片链接，实现快速保存联系人信息等
+编写存储过程处理复杂业务，在DB层面解决复杂问题。二维码生成客户名片链接，实现快速保存联系人信息等。
+另有参与测试用例编写及执行，以代码为基础进行白盒测试，弥补其它测试人员黑盒测试方式的不足，提高产品交付质量
 				</div>
 			</li>
 			<li>
@@ -166,11 +167,9 @@ https证书配置自动更新，无痕持续为用户服务。
 				</div>
 				<nav>责任描述：</nav>
 				<div>
-负责登录模块设计实现，图形滑动验证码登录配合邮箱验证给用户更多的安全感。
-对机构CRM已有功能进行优化改造。
-用Swagger自动生成文档提高开发效率。
-参与前端开发，基于Vue3和TypeScript的组合式API，实现响应式布局，兼容PC和pad。
-参与测试用例编写
+负责登录模块设计实现，图形滑动验证码登录配合邮箱验证给用户更多的安全感。对机构CRM已有功能进行优化改造。
+用Swagger自动生成文档提高开发效率。对公司nexus私服进行改造，添加安全验证控制权限，从2.x升级到3.x。从本小组使用推广到全公司共用。
+参与前端开发，基于Vue3和TypeScript的组合式API，结合媒体查询、flex弹性布局等CSS高级特性实现响应式布局。兼容PC、pad和手机端
 				</div>
 			</li>
 			<li>
@@ -188,13 +187,6 @@ https证书配置自动更新，无痕持续为用户服务。
 			<li>
 				<mark>海虹新健康 | APP后台</mark>
 				<nav>项目简介：</nav>
-				<div>
-全国就诊预约平台，提高医疗资源运行效率，建立就诊新秩序，构建和谐医保患关系
-				</div>
-				<nav>责任描述：</nav>
-				<div>
-参与系统部分需求的分析和部分接口文档的编写，以及系统管理和文档管理代码的编写。采
-				</div>
 			</li>
 		</ul>
 	</section>
@@ -202,10 +194,18 @@ https证书配置自动更新，无痕持续为用户服务。
 </article>
 <article class="paper">
 	<section>
-		<div>
-用JDK1.5新nio api实现高效io操作，结合线程池完成文件分片，实现视频流上传断点续传，封装有文件分割器FileSeparator和拼接器FileMerger
-		</div>
 		<ul class="proj">
+			<li class="follow">
+				<div>
+全国就诊预约平台，提高医疗资源运行效率，建立就诊新秩序，构建和谐医保患关系
+				</div>
+				<nav>责任描述：</nav>
+				<div>
+参与系统部分需求的分析和部分接口文档的编写，以及系统管理和文档管理代码的编写。
+采用JDK1.5新nio api实现高效io操作，结合线程池完成文件分片，实现视频流上传断点续传。
+封装有文件分割器FileSeparator和拼接器FileMerger
+				</div>
+			</li>
 			<li>
 				<mark>办公自动化OA系统 | PC网站</mark>
 				<nav>项目简介：</nav>
